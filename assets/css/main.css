@@ -284,7 +284,7 @@
 }
 
 .video-card {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   position: relative;
 }
 
@@ -552,7 +552,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 64px;
   background-color: #fff;
   border-radius: 50%;
@@ -590,7 +590,7 @@
 }
 
 .contact-card p a:hover {
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .event-card {
@@ -670,7 +670,7 @@
   position: relative;
   margin-bottom: 30px;
   border-radius: 50%;
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
 }
 
 @media (min-width: 1200px) {
@@ -733,7 +733,7 @@
 
 .event-card-list li strong {
   font-weight: 500;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .event-card-list li > i {
@@ -752,7 +752,7 @@
 
 .event-card-content h3 {
   font-size: 20px;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-weight: bold;
   margin: 0;
   letter-spacing: -0.04em;
@@ -1060,7 +1060,7 @@
 
 .cause-card__image {
   overflow: hidden;
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
 }
 
 .cause-card__image > img {
@@ -1104,7 +1104,7 @@
 
 .cause-card__content h3 {
   margin: 0;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 20px;
   font-weight: bold;
   line-height: 1.416;
@@ -1138,7 +1138,7 @@
 }
 
 .cause-card__content .thm-btn:hover {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   color: #fff;
 }
 .cause-details .cause-card .cause-card__content,
@@ -1183,7 +1183,7 @@
 }
 
 .cause-card__share:hover {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
 }
 
 .cause-card__share:hover > i {
@@ -1214,7 +1214,7 @@
 
 .cause-card__goals > p strong {
   font-weight: 400;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .cause-card__progress {
@@ -1522,7 +1522,7 @@
   position: relative;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
 }
 
 .blog-card__image > img {
@@ -1601,7 +1601,7 @@
 .blog-card__content h3 {
   margin: 0;
   font-weight: 700;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 22px;
   padding-left: 20px;
   padding-right: 20px;
@@ -1702,7 +1702,7 @@
 }
 
 .blog-card__meta a:hover > i {
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .blog-card__meta a i {
@@ -1756,11 +1756,12 @@
   --thm-secondary-rgb: 198, 139, 91;
   --thm-special: #485F42;
   --thm-special-rgb: 28, 37, 26;
-  --thm-black: #242323;
+  --thm-green: #485F42;
   --thm-black-rgb: 36, 35, 35;
   --thm-black2: #1d1c1c;
   --thm-black2-rgb: 29, 28, 28;
-  --thm-text-dark: #9e9e9e;
+  --thm-text-dark: #1d1c1c;
+  --thm-text-light: #b3b3b3;
   --thm-text-dark-rgb: 158, 158, 158;
 }
 
@@ -1785,7 +1786,7 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 @media (max-width: 575px) {
@@ -1916,7 +1917,7 @@ h6 {
 
 .block-title h3 {
   margin: 0;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 30px;
   font-weight: 700;
   margin-top: 20px;
@@ -1951,7 +1952,7 @@ h6 {
   padding-left: 45px;
   font-size: 18px;
   font-weight: 500;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 @media (min-width: 481px) {
@@ -2057,7 +2058,7 @@ h6 {
 }
 
 .post-pagination li:last-child a {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   color: #fff;
 }
 
@@ -2166,7 +2167,7 @@ h6 {
 # Navigations
 --------------------------------------------------------------*/
 .main-menu .container {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   position: relative;
   display: none;
   -webkit-box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1);
@@ -2242,7 +2243,7 @@ h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #9e9e9e;
+  color: var(--thm-text-light);
   -webkit-transition: 500ms;
   transition: 500ms;
   cursor: pointer;
@@ -2315,7 +2316,7 @@ h6 {
 .main-menu .main-menu__list li.cart-btn:hover span,
 .stricky-header .main-menu__list li.cart-btn:hover span {
   background-color: #fff;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .main-menu .main-menu__list li.cart-btn i,
@@ -2337,7 +2338,7 @@ h6 {
 .main-menu .thm-btn:hover,
 .stricky-header .thm-btn:hover {
   background-color: #fff;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .main-menu .main-menu__list li ul,
@@ -2385,14 +2386,14 @@ h6 {
 
 .main-menu .main-menu__list li ul li + li,
 .stricky-header .main-menu__list li ul li + li {
-  border-top: 1px solid RGBA(var(--thm-black), 0.1);
+  border-top: 1px solid RGBA(var(--thm-green), 0.1);
 }
 
 .main-menu .main-menu__list li ul li a,
 .stricky-header .main-menu__list li ul li a {
   font-size: 16px;
   line-height: 30px;
-  color: var(--thm-black);
+  color: var(--thm-green);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2494,7 +2495,7 @@ h6 {
 
 .main-header .mobile-nav__toggler {
   font-size: 20px;
-  color: var(--thm-black);
+  color: var(--thm-green);
   cursor: pointer;
   -webkit-transition: 500ms;
   transition: 500ms;
@@ -2585,7 +2586,7 @@ h6 {
 }
 
 .main-header__info-list li {
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 15px;
   font-weight: 500;
   display: -webkit-box;
@@ -2603,7 +2604,7 @@ h6 {
 }
 
 .main-header__info-list li:hover > i {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
 }
 
 .main-header__info-list li + li {
@@ -2682,7 +2683,7 @@ h6 {
 }
 
 .main-menu {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -2693,7 +2694,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   display: none;
   -webkit-transform: translateY(-110%);
   transform: translateY(-110%);
@@ -2791,7 +2792,7 @@ h6 {
 
 .main-header__two .header-upper .mobile-nav__toggler {
   font-size: 20px;
-  color: var(--thm-black);
+  color: var(--thm-green);
   cursor: pointer;
   -webkit-transition: 500ms;
   transition: 500ms;
@@ -2867,7 +2868,7 @@ h6 {
 
 .main-header__two .header-info__box p {
   margin: 0;
-  color: var(--thm-black);
+  color: var(--thm-text-dark);
   font-size: 15px;
   font-weight: 600;
   line-height: 1;
@@ -2875,7 +2876,7 @@ h6 {
 }
 
 .main-header__two .header-info__box p a {
-  color: inherit;
+  color: var(--thm-text-dark);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -2901,12 +2902,12 @@ h6 {
   margin-bottom: -39.5px;
   position: relative;
   z-index: 11;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .main-header__two .main-menu__list {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   width: calc(100% - 223px);
   padding-left: 60px;
   padding-right: 50px;
@@ -2973,7 +2974,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   opacity: 0.8;
   cursor: pointer;
 }
@@ -3085,7 +3086,7 @@ h6 {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
   background-color: #fff;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .mobile-nav__content .main-menu__list li.cart-btn span {
@@ -3271,7 +3272,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   opacity: 0.75;
   cursor: pointer;
 }
@@ -3325,7 +3326,7 @@ h6 {
 }
 
 .search-popup__content .thm-btn:hover {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   color: #fff;
 }
 
@@ -3628,7 +3629,7 @@ h6 {
 # Page Header
 --------------------------------------------------------------*/
 .page-header {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   position: relative;
 }
 
@@ -4011,7 +4012,7 @@ h6 {
 .event-details h3 {
   margin: 0;
   font-size: 30px;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -4116,7 +4117,7 @@ h6 {
 
 .blog-details h3 {
   margin: 0;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-weight: bold;
   font-size: 30px;
   letter-spacing: -0.04em;
@@ -4157,7 +4158,7 @@ h6 {
 .blog-details__title {
   margin: 0;
   font-size: 26px !important;
-  color: var(--thm-black);
+  color: var(--thm-green);
   margin-bottom: 30px !important;
 }
 
@@ -4195,7 +4196,7 @@ h6 {
   font-size: 20px;
   line-height: 1.67;
   font-weight: bold;
-  color: var(--thm-black);
+  color: var(--thm-green);
   letter-spacing: -0.04em;
   background-color: #f1f1f1;
   border-radius: 15px;
@@ -4278,7 +4279,7 @@ h6 {
 }
 
 .blog-details__category li span {
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-family: var(--heading-font);
   font-size: 16px;
   font-weight: bold;
@@ -4343,7 +4344,7 @@ h6 {
 
 .comment-one__single h3 {
   margin: 0;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-weight: bold;
   line-height: 1;
   font-size: 20px;
@@ -4387,7 +4388,7 @@ h6 {
 }
 
 .comment-one .thm-btn:hover {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   color: #fff;
 }
 
@@ -4424,7 +4425,7 @@ h6 {
   margin: 0;
   font-size: 20px;
   font-weight: bold;
-  color: var(--thm-black);
+  color: var(--thm-green);
   line-height: 1;
   margin-bottom: 30px;
 }
@@ -4665,7 +4666,7 @@ h6 {
 }
 
 .blog-sidebar__comments li a:hover {
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .blog-sidebar__comments li::before {
@@ -4699,7 +4700,7 @@ h6 {
 # Footer
 --------------------------------------------------------------*/
 .main-footer {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   position: relative;
 }
 
@@ -4867,7 +4868,7 @@ h6 {
 }
 
 .footer-social.black-hover a:hover {
-  background-color: var(--thm-black) !important;
+  background-color: var(--thm-green) !important;
   color: #fff !important;
 }
 
@@ -5114,7 +5115,7 @@ h6 {
 
 .faq-one #accordion .para-title {
   position: relative;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 16px;
   font-weight: bold;
   line-height: 1.3;
@@ -5334,7 +5335,7 @@ h6 {
 
 .cause-details .cause-card__goals > p strong {
   font-weight: 400;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .cause-details .cause-card {
@@ -5343,7 +5344,7 @@ h6 {
 }
 
 .cause-details .thm-btn:hover {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   color: #fff;
 }
 
@@ -5410,7 +5411,7 @@ h6 {
 
 .cause-details__presentations h3 {
   font-size: 20px;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-weight: bold;
   margin: 0;
   margin-top: 20px;
@@ -5431,7 +5432,7 @@ h6 {
 }
 
 .cause-details__presentations .thm-btn:hover {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   color: #fff;
 }
 
@@ -5492,7 +5493,7 @@ h6 {
 
 .cause-details__organizer h3 strong {
   font-weight: 500;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .cause-details__organizer-list {
@@ -5551,7 +5552,7 @@ h6 {
   margin: 0;
   font-size: 20px;
   font-weight: bold;
-  color: var(--thm-black);
+  color: var(--thm-green);
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -5622,7 +5623,7 @@ h6 {
 .cause-details__donations-list li h3 {
   margin: 0;
   line-height: 1;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 16px;
   font-weight: bold;
   line-height: 1;
@@ -5992,7 +5993,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   font-size: 18px;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-weight: bold;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6052,7 +6053,7 @@ h6 {
 
 .about-two__box-two h3 {
   margin: 0;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-weight: bold;
   margin-top: 5px;
   font-size: 18px;
@@ -6065,7 +6066,7 @@ h6 {
 }
 
 .about-two .thm-btn:hover {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   color: #fff;
 }
 
@@ -6114,7 +6115,7 @@ h6 {
 
 .testimonials-one__single h3 {
   margin: 0;
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 18px;
   font-family: var(--thm-font);
   font-weight: 600;
@@ -6483,7 +6484,7 @@ h6 {
 
 .call-to-action__icon i {
   font-size: 60px;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 @media (max-width: 991px) {
@@ -6500,7 +6501,7 @@ h6 {
 }
 
 .call-to-action-two {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   position: relative;
 }
 
@@ -6757,7 +6758,7 @@ h6 {
 
 @media (max-width: 991px) {
   .donate-options__icon h3 {
-    color: var(--thm-black);
+    color: var(--thm-green);
   }
 }
 
@@ -6800,7 +6801,7 @@ h6 {
 }
 
 .donate-options__call:hover i {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
 }
 
 .donate-options__call p {
@@ -6816,7 +6817,7 @@ h6 {
 }
 
 .donate-options__call p a {
-  color: var(--thm-black);
+  color: var(--thm-green);
   text-decoration: underline;
 }
 
@@ -6841,7 +6842,7 @@ h6 {
   border-top-right-radius: 15px;
   font-size: 26px;
   font-weight: bold;
-  color: var(--thm-black);
+  color: var(--thm-green);
   letter-spacing: -0.04em;
   padding: 31px 0;
   margin-left: -15px;
@@ -6914,7 +6915,7 @@ h6 {
 
 #donate-amount__predefined li.active a,
 #donate-amount__predefined li:hover a {
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 #donate-amount__predefined li a {
@@ -7024,7 +7025,7 @@ h6 {
 }
 
 .service-one__box h3 {
-  color: var(--thm-black);
+  color: var(--thm-green);
   font-size: 20px;
   font-weight: bold;
   line-height: 1;
@@ -7253,7 +7254,7 @@ h6 {
 }
 
 .service-two__box h3 a:hover {
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .service-two__box-link {
@@ -7268,7 +7269,7 @@ h6 {
   align-items: center;
   text-align: center;
   font-size: 24px;
-  color: var(--thm-black);
+  color: var(--thm-green);
   width: 68px;
   height: 68px;
   background-color: #fff;
@@ -7286,7 +7287,7 @@ h6 {
 }
 
 .service-two__box-link:hover {
-  background-color: var(--thm-black);
+  background-color: var(--thm-green);
   color: #fff;
 }
 
@@ -7487,7 +7488,7 @@ h6 {
   margin: 0;
   font-size: 36px;
   font-weight: bold;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 
 .price-one__single a.thm-btn {
@@ -7543,6 +7544,6 @@ h6 {
 
 .price-one__single:hover a.thm-btn:hover {
   background-color: #fff;
-  color: var(--thm-black);
+  color: var(--thm-green);
 }
 /*# sourceMappingURL=main.css.map */

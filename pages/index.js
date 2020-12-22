@@ -18,6 +18,8 @@ import CallToAction from "../components/call-to-action/call-to-action";
 import GoogleMap from "../components/google-map";
 import BrandCarousel from "../components/brand-carousel";
 import Footer from "../components/footer";
+import ServiceTwo from "../components/services/service-two";
+import AboutTwo from "../components/about/about-two";
 
 const HomeOne = () => {
   return (
@@ -25,21 +27,32 @@ const HomeOne = () => {
       <HeaderTwo />
       <StickyHeader />
       <MainSlider />
+
+      <ServiceTwo />
+
       <VideoCardTwo />
-      <ServiceOne />
-      <AboutCounter />
+      <BlogHome />
+      <AboutTwo />
+      <CallToActionTwo />
+
+
+      <TeamHome />
+      <GalleryTestimonials>
+      <GalleryHome />
+      <TestimonialsTwo />
+    </GalleryTestimonials>
+
+      {/*<AboutCounter />
       <CausesHome />
       <CallToActionTwo />
       <DonationOptions />
-      <TeamHome />
       <GalleryTestimonials>
         <GalleryHome />
         <TestimonialsTwo />
       </GalleryTestimonials>
-      <BlogHome />
       <CallToAction />
       <GoogleMap extraClass="home" />
-      <BrandCarousel extraClass="client-carousel__has-top-shadow" />
+      <BrandCarousel extraClass="client-carousel__has-top-shadow" />*/}
       <Footer />
     </Layout>
   );

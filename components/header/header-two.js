@@ -84,24 +84,26 @@ const HeaderTwo = () => {
               <div className="header-info__box-content">
                 <h3>Email</h3>
                 <p>
-                  <a href="mailto:needhelp@azino.com">needhelp@azino.com</a>
+                  <a href="mailto:adititrend@gmail.com">adititrend@gmail.com</a>
                 </p>
               </div>
             </div>
             <div className="header-info__box">
               <i className="azino-icon-calling"></i>
               <div className="header-info__box-content">
-                <h3>Phone</h3>
+                <h3>Teléfono</h3>
                 <p>
-                  <a href="tel:666-888-0000">666 888 0000</a>
+                  <a href="tel:666-888-0000">(+593) 096 369 4764</a>
                 </p>
               </div>
             </div>
             <div className="header-info__box">
-              <i className="azino-icon-address"></i>
+              <i className="fab fa-instagram"></i>
               <div className="header-info__box-content">
-                <h3>Visit</h3>
-                <p>88 Broklyn Golden Street, USA</p>
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/adititrend/" aria-label="instagram">
+                  <p>@adititrend</p>
+                </a>
               </div>
             </div>
           </div>
