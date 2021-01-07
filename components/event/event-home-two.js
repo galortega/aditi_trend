@@ -6,7 +6,7 @@ import image1 from "../../assets/images/events/event-1-1.jpg";
 import image2 from "../../assets/images/events/event-1-2.jpg";
 import image3 from "../../assets/images/events/event-1-3.jpg";
 import image4 from "../../assets/images/events/event-1-4.jpg";
-import heart from "../../assets/images/shapes/heart-2-1.png";
+import heart from "../../assets/images/shapes/leaves-2-1.png";
 
 const EVENT_HOME_TWO_DATA = [
   {
@@ -53,7 +53,7 @@ const EventHomeTwo = () => {
           <Col lg={7}>
             <div className="block-title">
               <p>
-                <img src={heart} width="15" alt="" />
+                <img src={heart} width="30" alt="" />
                 Latest Event List
               </p>
               <h3>

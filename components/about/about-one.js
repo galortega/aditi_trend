@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import about1 from "../../assets/images/shapes/about-bag-1-1.png";
 import about2 from "../../assets/images/resources/about-1-1.jpg";
 import about3 from "../../assets/images/resources/about-1-2.jpg";
-import heart from "../../assets/images/shapes/heart-2-1.png";
+import heart from "../../assets/images/shapes/leaves-2-1.png";
 
 const AboutOne = () => {
   return (
@@ -27,7 +27,7 @@ const AboutOne = () => {
             <Col md={12} lg={4}>
               <div className="block-title">
                 <p>
-                  <img src={heart} width="15" alt="" />
+                  <img src={heart} width="30" alt="" />
                   Make a Difference
                 </p>
                 <h3>Let’s help them together.</h3>

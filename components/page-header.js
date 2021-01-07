@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import pageHeaderBg from "../assets/images/backgrounds/page-header-1-1.jpg";
+import pageHeaderBg from "../assets/images/main-slider/banner-1.png";
 
 const PageHeader = ({ title, crumbTitle }) => {
   return (
@@ -15,7 +15,7 @@ const PageHeader = ({ title, crumbTitle }) => {
         <ul className="thm-breadcrumb list-unstyled ">
           <li>
             <Link href="/">
-              <a>Home</a>
+              <a>Inicio</a>
             </Link>
           </li>
           <li>-</li>

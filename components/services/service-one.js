@@ -3,54 +3,47 @@ import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import serviceBg from "../../assets/images/backgrounds/service-hand-bg-1-1.png";
 import serviceLine from "../../assets/images/shapes/service-line-1-1.png";
-import blockTitleHeart from "../../assets/images/shapes/heart-2-1.png";
+import blockTitleHeart from "../../assets/images/shapes/leaves-2-1.png";
 
 const serviceOneData = [
   {
     icon: "azino-icon-water-bottle",
     extraClassName: "background-secondary",
-    title: "Water",
-    text: "Lorem ipsum is simply free text available in the market wesbites.",
-    link: "#"
+    title: "Moda",
+    text: "Tendencias sostenibles.",
+    link: "/news"
   },
   {
     icon: "azino-icon-hamburger",
-    title: "Food",
+    title: "Lifestyle",
     extraClassName: "background-base",
-    text: "Lorem ipsum is simply free text available in the market wesbites.",
-    link: "#"
+    text: "Vida sana y beauty.",
+    link: "/news"
   },
   {
     icon: "azino-icon-reading-book",
-    title: "Education",
-    text: "Lorem ipsum is simply free text available in the market wesbites.",
-    link: "#",
+    title: "Cultura",
+    text: "Nuestro lado intelectual.",
+    link: "/news",
     extraClassName: "background-primary"
-  },
-  {
-    icon: "azino-icon-stethoscope",
-    title: "Medical",
-    extraClassName: "background-special",
-    text: "Lorem ipsum is simply free text available in the market wesbites.",
-    link: "#"
   }
 ];
 
 const ServiceOne = () => {
   return (
     <section
-      className="service-one pt-120 pb-90"
+      className="service-one pt-50"
       style={{ backgroundImage: `url(${serviceBg})` }}
     >
       <Container>
         <img src={serviceLine} alt="" className="service-one__shape-1" />
         <div className="block-title">
           <p>
-            <img src={blockTitleHeart} width="15" alt="" />
-            Welcome to Azino Charity
+            <img src={blockTitleHeart} width="30" alt="" />
+            Bienvenidxs al lado cool de la moda
           </p>
           <h3>
-            We believe that we can save <br /> more lifes with you.
+            En Áditi Trend creemos que <br /> la moda debe ser sustentable.
           </h3>
         </div>
         <Row>

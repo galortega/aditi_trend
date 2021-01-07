@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, EffectFade } from "swiper";
 
-import banner1 from "../../assets/images/main-slider/slider-1-1.jpg";
-import banner2 from "../../assets/images/main-slider/slider-1-2.jpg";
+import banner1 from "../../assets/images/main-slider/banner-1.png";
+import banner2 from "../../assets/images/main-slider/banner-2.png";
 
 SwiperCore.use([Autoplay, Pagination, EffectFade]);
 
@@ -34,16 +34,16 @@ const MainSlider = () => {
           <Container>
             <Row className="row justify-content-end">
               <Col xl={7} lg={12} className="text-right">
-                <p>Help the poor in need</p>
+                <p>El mundo está cambiando y la moda también</p>
                 <h2>
-                  Lend the <br /> helping hand <br /> get involved.
+                  Libre, <br /> creativa <br /> y poderosa.
                 </h2>
                 <a
                   href="#"
                   data-target=".donate-options"
                   className="scroll-to-target thm-btn"
                 >
-                  Start Donating
+                  ¡Compra ahora!
                 </a>
               </Col>
             </Row>
@@ -57,18 +57,17 @@ const MainSlider = () => {
 
           <Container>
             <Row className="row justify-content-end">
-              <Col xl={8} lg={12} className="text-right">
-                <p>Help the poor in need</p>
+              <Col xl={7} lg={12} className="text-right">
+                <p>El mundo está cambiando y la moda también</p>
                 <h2>
-                  Donat<span className="iconic-text">i</span>on <br /> Can
-                  Change <br /> Life
+                  Libre, <br /> creativa <br /> y poderosa.
                 </h2>
                 <a
                   href="#"
                   data-target=".donate-options"
-                  className="scroll-to-target thm-btn "
+                  className="scroll-to-target thm-btn"
                 >
-                  Start Donating
+                  ¡Compra ahora!
                 </a>
               </Col>
             </Row>
@@ -81,18 +80,18 @@ const MainSlider = () => {
           ></div>
 
           <Container>
-            <Row className="justify-content-end">
-              <Col lg={7} className=" text-right">
-                <p>Help the poor in need</p>
+            <Row className="row justify-content-end">
+              <Col xl={7} lg={12} className="text-right">
+                <p>El mundo está cambiando y la moda también</p>
                 <h2>
-                  Lend the <br /> helping hand <br /> get involved.
+                  Libre, <br /> creativa <br /> y poderosa.
                 </h2>
                 <a
                   href="#"
                   data-target=".donate-options"
-                  className="scroll-to-target thm-btn "
+                  className="scroll-to-target thm-btn"
                 >
-                  Start Donating
+                  ¡Compra ahora!
                 </a>
               </Col>
             </Row>

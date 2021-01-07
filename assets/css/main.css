@@ -1740,11 +1740,29 @@
   margin-bottom: 0;
 }
 
+@font-face {
+  font-family: 'Lanenar';
+  src:  url('../fonts/Lanenar.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'nalika-signature';
+  src:  url('../fonts/nalika-signature.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
 :root {
-  --thm-font: "Jost", sans-serif;
+  --thm-font: "Lanenar", serif;
+  --thm-handwriting: "nalika-signature", serif;
   --heading-font: "Libre Baskerville", serif;
   --thm-color: #7e7e7e;
   --thm-color-rgb: 126, 126, 126;
@@ -2235,7 +2253,7 @@ h6 {
 .stricky-header .main-menu__list > li > span,
 .stricky-header .main-menu__list > li > a {
   font-family: var(--thm-font);
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2529,9 +2547,10 @@ h6 {
 
 .main-header__top p {
   margin: 0;
-  font-size: 14px;
-  color: #7e7e7e;
+  font-size: 40px;
+  color: #ffff;
   font-weight: 500;
+  font-family: var(--thm-handwriting)
 }
 
 .main-header__social {
@@ -2544,7 +2563,7 @@ h6 {
 }
 
 .main-header__social a {
-  color: #7e7e7e;
+  color: #ffff;
   font-size: 16px;
   font-weight: 500;
   -webkit-transition: 500ms;
@@ -3386,7 +3405,7 @@ h6 {
   margin: 0;
   font-size: 20px;
   font-weight: 600;
-  color: var(--thm-base);
+  color: var(--thm-text-light);
   opacity: 0;
   -webkit-transform: translateY(-120px);
   transform: translateY(-120px);
@@ -7070,6 +7089,8 @@ h6 {
   margin-right: auto;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
   position: relative;
 }
 
@@ -7229,15 +7250,17 @@ h6 {
 .service-two__box p {
   margin: 0;
   color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 52px;
+  font-weight: 300;
   line-height: 1;
   margin-top: 20px;
   margin-bottom: 10px;
+  font-family: var(--thm-handwriting);
 }
 
 .service-two__box h3 {
   margin: 0;
+  margin-top: 5px;
   color: #fff;
   font-size: 36px;
   font-weight: bold;
@@ -7547,3 +7570,7 @@ h6 {
   color: var(--thm-green);
 }
 /*# sourceMappingURL=main.css.map */
+
+.header-two-navs {
+  font-size: 16px;
+}

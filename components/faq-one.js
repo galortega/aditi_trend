@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Accordion, Container, Row, Col, Card } from "react-bootstrap";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import AccordionContext from "react-bootstrap/AccordionContext";
-import heart from "../assets/images/shapes/heart-2-1.png";
+import heart from "../assets/images/shapes/leaves-2-1.png";
 import heart1 from "../assets/images/shapes/about-count-heart-1-1.png";
 import faqImage from "../assets/images/resources/faq-box-1-1.jpg";
 
@@ -42,7 +42,7 @@ const FaqOne = () => {
             <div className="faq-one__content">
               <div className="block-title">
                 <p>
-                  <img src={heart} width="15" alt="" />
+                  <img src={heart} width="30" alt="" />
                   Help People Now
                 </p>
                 <h3>

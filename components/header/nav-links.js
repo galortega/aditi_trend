@@ -15,17 +15,17 @@ const NavLinks = ({ extraClassName }) => {
         </Link>
       </li>
       <li>
-        <Link href="/news">
-          <a>Moda</a>
+        <Link href="/blog/moda">
+          <a >Moda</a>
         </Link>
       </li>
       <li>
-        <Link href="/news">
+        <Link href="/blog/lifestyle">
           <a>Lifestyle</a>
         </Link>
       </li>
       <li>
-        <Link href="/news">
+        <Link href="/blog/cultura">
           <a>Cultura</a>
         </Link>
       </li>

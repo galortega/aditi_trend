@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import heartImage from "../../assets/images/shapes/heart-2-1.png";
+import heartImage from "../../assets/images/shapes/leaves-2-1.png";
 import bgImage from "../../assets/images/team/team-map-1-1.png";
 import teamImage1 from "../../assets/images/team/team-2-1.jpg";
 import teamImage2 from "../../assets/images/team/team-2-2.jpg";
@@ -118,7 +118,7 @@ const TeamHome = () => {
             <Col md={12} lg={7}>
               <div className="block-title">
                 <p>
-                  <img src={heartImage} width="15" alt="" />
+                  <img src={heartImage} width="30" alt="" />
                   Our Volunteers
                 </p>
                 <h3>

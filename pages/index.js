@@ -20,15 +20,16 @@ import BrandCarousel from "../components/brand-carousel";
 import Footer from "../components/footer";
 import ServiceTwo from "../components/services/service-two";
 import AboutTwo from "../components/about/about-two";
+import Service from "../components/services/service";
 
 const HomeOne = () => {
   return (
-    <Layout pageTitle="Home One || Azino || Charity React Next Template">
+    <Layout pageTitle="Home || Áditi Trend || Slow Fashion">
       <HeaderTwo />
       <StickyHeader />
       <MainSlider />
 
-      <ServiceTwo />
+      <Service />
 
       <VideoCardTwo />
       <BlogHome />

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Row, Col } from "react-bootstrap";
-import heartImage from "../../assets/images/shapes/heart-2-1.png";
+import heartImage from "../../assets/images/shapes/leaves-2-1.png";
 import causeImage1 from "../../assets/images/causes/cause-1-1.jpg";
 import causeImage2 from "../../assets/images/causes/cause-1-4.jpg";
 import causeImage3 from "../../assets/images/causes/cause-1-3.jpg";
@@ -79,7 +79,7 @@ const CausesHome = () => {
           <Col lg={7}>
             <div className="block-title">
               <p>
-                <img src={heartImage} width="15" alt="" />
+                <img src={heartImage} width="30" alt="" />
                 Popular Causes
               </p>
               <h3>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import ModalVideo from "react-modal-video";
 import { Container } from "react-bootstrap";
 import bgImage from "../../assets/images/backgrounds/page-header-1-1.jpg";
-import heart from "../../assets/images/shapes/heart-2-1.png";
+import heart from "../../assets/images/shapes/leaves-2-1.png";
 
 const VideoCard = () => {
   const [isOpen, setOpen] = useState(false);
@@ -23,7 +23,7 @@ const VideoCard = () => {
 
       <Container className=" text-center pt-120 pb-120">
         <p>
-          <img src={heart} width="15" alt="" />
+          <img src={heart} width="30" alt="" />
           Help Other People
         </p>
         <h3>

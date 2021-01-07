@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import heartImage from "../assets/images/shapes/heart-2-1.png";
+import heartImage from "../assets/images/shapes/leaves-2-1.png";
 
 const DonationOptions = () => {
   return (
@@ -11,7 +11,7 @@ const DonationOptions = () => {
             <div className="donate-options__content">
               <div className="block-title">
                 <p>
-                  <img src={heartImage} width="15" alt="" />
+                  <img src={heartImage} width="30" alt="" />
                   Donate Now
                 </p>
                 <h3>
@@ -29,7 +29,7 @@ const DonationOptions = () => {
                   <p>
                     Have any question about donation? <br />{" "}
                     <span>Call us now:</span>{" "}
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:096 369 4764">096 369 4764</a>
                   </p>
                 </div>
               </div>

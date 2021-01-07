@@ -50,7 +50,7 @@ const HeaderTwo = () => {
     <div className="main-header__two">
       <div className="main-header__top">
         <Container>
-          <p>Welcome to non profit charity platform</p>
+          <p>Consume local</p>
           <div className="main-header__social">
             <a href="#" aria-label="twitter">
               <i className="fab fa-twitter"></i>
@@ -72,7 +72,7 @@ const HeaderTwo = () => {
           <div className="logo-box">
             <Link href="/">
               <a aria-label="logo image">
-                <img src={logoDark} width="200" alt="" />
+                <img src={logoDark} width="200" alt="logo áditi" />
               </a>
             </Link>
             <span className="fa fa-bars mobile-nav__toggler"></span>
@@ -93,7 +93,7 @@ const HeaderTwo = () => {
               <div className="header-info__box-content">
                 <h3>Teléfono</h3>
                 <p>
-                  <a href="tel:666-888-0000">(+593) 096 369 4764</a>
+                  <a href="tel:096 369 4764">096 369 4764</a>
                 </p>
               </div>
             </div>

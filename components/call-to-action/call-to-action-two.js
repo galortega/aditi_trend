@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import bgImage from "../../assets/images/backgrounds/page-header-1-1.jpg";
-import HeartImage from "../../assets/images/shapes/heart-2-1.png";
+import HeartImage from "../../assets/images/shapes/leaves-2-1.png";
 
 const CallToActionTwo = () => {
   return (
@@ -17,7 +17,7 @@ const CallToActionTwo = () => {
           <Col lg={7}>
             <div className="block-title">
               <p>
-                <img src={HeartImage} width="15" alt="" />
+                <img src={HeartImage} width="30" alt="" />
                 Help Other People
               </p>
               <h3>

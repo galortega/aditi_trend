@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import heart from "../../assets/images/shapes/heart-2-1.png";
+import heart from "../../assets/images/shapes/leaves-2-1.png";
 
 const VolunteerForm = () => {
   return (
@@ -11,7 +11,7 @@ const VolunteerForm = () => {
             <div className="become-volunteer__content mb-40">
               <div className="block-title">
                 <p>
-                  <img src={heart} width="15" alt="" />
+                  <img src={heart} width="30" alt="" />
                   Join Us Now
                 </p>
                 <h3>

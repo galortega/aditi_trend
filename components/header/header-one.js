@@ -55,7 +55,7 @@ const HeaderOne = () => {
               <div className="logo-box">
                 <Link href="/">
                   <a aria-label="logo image">
-                    <img src={logoDark} width="101" alt="" />
+                    <img src={logoDark} width="150" alt="logo áditi" />
                   </a>
                 </Link>
                 <span className="fa fa-bars mobile-nav__toggler"></span>
@@ -69,7 +69,7 @@ const HeaderOne = () => {
               className="d-none d-md-none d-lg-none d-xl-block"
             >
               <div className="main-header__top">
-                <p>Welcome to non profit charity platform</p>
+                <p>Consume local</p>
                 <div className="main-header__social">
                   <a href="#" aria-label="twitter">
                     <i className="fab fa-twitter"></i>
@@ -86,21 +86,33 @@ const HeaderOne = () => {
                 </div>
               </div>
               <nav className="main-menu dynamic-radius">
-                <NavLinks />
+                <NavLinks className="header-two-navs" />
               </nav>
 
               <div className="main-header__info">
                 <ul className="list-unstyled main-header__info-list">
                   <li>
                     <i className="azino-icon-email"></i>
-                    <a href="mailto:needhelp@azino.com">needhelp@azino.com</a>
+                    <a href="mailto:adititrend@gmail.com">
+                      adititrend@gmail.com
+                    </a>
                   </li>
                   <li>
                     <i className="azino-icon-telephone"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:096 369 4764">096 369 4764</a>
+                  </li>
+                  <li>
+                    <i className="fab fa-instagram"></i>
+                    <a
+                      href="https://www.instagram.com/adititrend/"
+                      aria-label="instagram"
+                      width="16px"
+                    >
+                      @adititrend
+                    </a>
                   </li>
                 </ul>
-                <div className="main-header__language">
+                {/*<div className="main-header__language">
                   <div className="main-header__language-image">
                     <img src={flag1} alt="" />
                   </div>
@@ -114,8 +126,8 @@ const HeaderOne = () => {
                   <i
                     className="fa fa-angle-down
                   "
-                  ></i>
-                </div>
+  ></i>
+                </div>*/}
               </div>
             </Col>
           </Row>

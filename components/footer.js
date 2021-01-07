@@ -30,18 +30,17 @@ const Footer = () => {
                 <ul className="list-unstyled footer-widget__contact">
                   <li>
                     <a href="#">
-                      <i className="azino-icon-telephone"></i>666 888 0000
+                      <i className="azino-icon-telephone"></i>096 369 4764
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="azino-icon-email"></i>needhelp@azino.com
+                      <i className="azino-icon-email"></i>adititrend@gmail.com
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="azino-icon-pin"></i>88 Broklyn Golden
-                      Street, USA
+                      <i className="azino-icon-pin"></i>Guayaquil, Ecuador
                     </a>
                   </li>
                 </ul>

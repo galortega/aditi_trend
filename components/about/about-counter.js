@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { Container, Row, Col } from "react-bootstrap";
-import heartImage from "../../assets/images/shapes/heart-2-1.png";
+import heartImage from "../../assets/images/shapes/leaves-2-1.png";
 import aboutImage from "../../assets/images/resources/about-counter-1-1.jpg";
 import aboutHeart from "../../assets/images/shapes/about-count-heart-1-1.png";
 
@@ -23,7 +23,7 @@ const AboutCounter = () => {
           <Col lg={6}>
             <div className="block-title">
               <p>
-                <img src={heartImage} width="15" alt="" />
+                <img src={heartImage} width="30" alt="" />
                 Help People Now
               </p>
               <h3>
