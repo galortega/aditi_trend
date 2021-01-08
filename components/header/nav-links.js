@@ -16,7 +16,7 @@ const NavLinks = ({ extraClassName }) => {
       </li>
       <li>
         <Link href="/blog/moda">
-          <a >Moda</a>
+          <a>Moda</a>
         </Link>
       </li>
       <li>
@@ -39,9 +39,19 @@ const NavLinks = ({ extraClassName }) => {
           <a>Contactános</a>
         </Link>
       </li>
+      <li>
+        <Link href="/contact">
+          <a>
+            <span>
+              <i className="fa-shopping-bag" />
+              Tienda
+            </span>
+          </a>
+        </Link>
+      </li>
       <li className="search-btn search-toggler">
         <span>
-         {/* <input
+          {/* <input
             type="email"
             name="EMAIL"
             id="mc-email"

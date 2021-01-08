@@ -1741,21 +1741,20 @@
 }
 
 @font-face {
-  font-family: 'Lanenar';
-  src:  url('../fonts/Lanenar.ttf') format('truetype');
+  font-family: "Lanenar";
+  src: url("../fonts/Lanenar.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
 @font-face {
-  font-family: 'nalika-signature';
-  src:  url('../fonts/nalika-signature.ttf') format('truetype');
+  font-family: "nalika-signature";
+  src: url("../fonts/nalika-signature.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: block;
 }
-
 
 /*--------------------------------------------------------------
 # Common
@@ -1772,9 +1771,9 @@
   --thm-primary-rgb: 120, 113, 48;
   --thm-secondary: #c68b5b;
   --thm-secondary-rgb: 198, 139, 91;
-  --thm-special: #485F42;
+  --thm-special: #485f42;
   --thm-special-rgb: 28, 37, 26;
-  --thm-green: #485F42;
+  --thm-green: #485f42;
   --thm-black-rgb: 36, 35, 35;
   --thm-black2: #1d1c1c;
   --thm-black2-rgb: 29, 28, 28;
@@ -2541,16 +2540,18 @@ h6 {
   align-items: center;
   padding-left: 50px;
   padding-right: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
 }
 
 .main-header__top p {
   margin: 0;
-  font-size: 40px;
+  padding: 0;
+  font-size: 35px;
   color: #ffff;
   font-weight: 500;
-  font-family: var(--thm-handwriting)
+  font-family: var(--thm-handwriting);
 }
 
 .main-header__social {

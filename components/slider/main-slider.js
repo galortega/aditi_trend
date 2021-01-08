@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, EffectFade } from "swiper";
 
 import banner1 from "../../assets/images/main-slider/banner-1.png";
-import banner2 from "../../assets/images/main-slider/banner-2.png";
 
 SwiperCore.use([Autoplay, Pagination, EffectFade]);
 
@@ -52,7 +51,7 @@ const MainSlider = () => {
         <SwiperSlide>
           <div
             className="image-layer"
-            style={{ backgroundImage: `url(${banner2})` }}
+            style={{ backgroundImage: `url(${banner1})` }}
           ></div>
 
           <Container>
