@@ -6,6 +6,14 @@ import PageHeader from "../components/page-header";
 import BlogDetails from "../components/blog-details";
 import Footer from "../components/footer";
 
+export async function getStaticProps() {
+  const posts = await getPosts();
+  return {
+    revalidate: 10,
+    props: { posts }
+  };
+}
+
 const NewsDetails = () => {
   return (
     <Layout pageTitle="News Details || Azino || Charity React Next Template">

@@ -1,4 +1,6 @@
 import React from "react";
+import Head from "next/head";
+
 import { Container, Row, Col } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,37 +11,7 @@ import blogImage1 from "../../assets/images/blog/blog-1-1.jpg";
 import blogImage2 from "../../assets/images/blog/blog-1-2.jpg";
 import blogImage3 from "../../assets/images/blog/blog-1-3.jpg";
 
-const BLOG_DATA = [
-  {
-    image: blogImage1,
-    title: "Our donation is hope for poor childrens",
-    date: "20 May",
-    text: "Lorem ipsum is simply free text used by copytyping refreshing.",
-    link: "/news-details",
-    commentCount: "2 Comments",
-    author: "Admin"
-  },
-  {
-    image: blogImage2,
-    title: "Our donation is hope for poor childrens",
-    date: "20 May",
-    text: "Lorem ipsum is simply free text used by copytyping refreshing.",
-    link: "/news-details",
-    commentCount: "2 Comments",
-    author: "Admin"
-  },
-  {
-    image: blogImage3,
-    title: "Our donation is hope for poor childrens",
-    date: "20 May",
-    text: "Lorem ipsum is simply free text used by copytyping refreshing.",
-    link: "/news-details",
-    commentCount: "2 Comments",
-    author: "Admin"
-  }
-];
-
-const BlogHome = () => {
+const BlogHome = ({ posts }) => {
   const blogCarouselOptions = {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -95,9 +67,9 @@ const BlogHome = () => {
           </Col>
         </Row>
         <Swiper {...blogCarouselOptions}>
-          {BLOG_DATA.map(
+          {posts.map(
             (
-              { image, title, date, text, link, commentCount, author },
+              { image, title, date, text, slug, commentCount, author },
               index
             ) => (
               <SwiperSlide key={index}>
@@ -106,7 +78,7 @@ const BlogHome = () => {
                   title={title}
                   date={date}
                   text={text}
-                  link={link}
+                  slug={slug}
                   commentCount={commentCount}
                   author={author}
                 />

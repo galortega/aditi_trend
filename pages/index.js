@@ -21,8 +21,18 @@ import Footer from "../components/footer";
 import ServiceTwo from "../components/services/service-two";
 import AboutTwo from "../components/about/about-two";
 import Service from "../components/services/service";
+import _ from "lodash";
+import getPrevs from "./api/prevs";
 
-const HomeOne = () => {
+export async function getStaticProps() {
+  const posts = await getPrevs();
+  return {
+    revalidate: 10,
+    props: { posts }
+  };
+}
+
+const HomeOne = (props) => {
   return (
     <Layout pageTitle="Home || Áditi Trend || Slow Fashion">
       <HeaderTwo />
@@ -32,16 +42,15 @@ const HomeOne = () => {
       <Service />
 
       <VideoCardTwo />
-      <BlogHome />
+      <BlogHome posts={props.posts} />
       <AboutTwo />
       <CallToActionTwo />
 
-
       <TeamHome />
       <GalleryTestimonials>
-      <GalleryHome />
-      <TestimonialsTwo />
-    </GalleryTestimonials>
+        <GalleryHome />
+        <TestimonialsTwo />
+      </GalleryTestimonials>
 
       {/*<AboutCounter />
       <CausesHome />

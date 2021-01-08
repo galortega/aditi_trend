@@ -1,7 +1,16 @@
 import React from "react";
 import Link from "next/link";
 
-const BlogCard = ({ image, title, date, text, link, commentCount, author }) => {
+const BlogCard = ({
+  image,
+  title,
+  date,
+  text,
+  link,
+  slug,
+  commentCount,
+  author
+}) => {
   return (
     <div className="blog-card">
       <div className="blog-card__inner">
@@ -11,24 +20,24 @@ const BlogCard = ({ image, title, date, text, link, commentCount, author }) => {
         </div>
         <div className="blog-card__content">
           <div className="blog-card__meta">
-            <Link href={link}>
+            <Link href="/post/[slug]" as={`/post/${slug}`}>
               <a>
                 <i className="far fa-user-circle"></i> {author}
               </a>
             </Link>
-            <Link href={link}>
+            <Link href="/post/[slug]" as={`/post/${slug}`}>
               <a>
                 <i className="far fa-comments"></i> {commentCount}
               </a>
             </Link>
           </div>
           <h3>
-            <Link href={link}>
+            <Link href="/post/[slug]" as={`/post/${slug}`}>
               <a>{title}</a>
             </Link>
           </h3>
           <p>{text}</p>
-          <Link href={link}>
+          <Link href="/post/[slug]" as={`/post/${slug}`}>
             <a className="blog-card__more">
               <i className="far fa-angle-right"></i>Read More
             </a>

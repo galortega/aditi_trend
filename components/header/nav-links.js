@@ -42,10 +42,10 @@ const NavLinks = ({ extraClassName }) => {
       <li>
         <Link href="/contact">
           <a>
-            <span>
-              <i className="fa-shopping-bag" />
-              Tienda
-            </span>
+            <>
+              <a>Tienda</a>
+              <i className="fa-shopping-bag ml-2"></i>
+            </>
           </a>
         </Link>
       </li>
