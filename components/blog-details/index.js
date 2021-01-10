@@ -5,13 +5,13 @@ import Comments from "./comments";
 import CommentForm from "./comment-form";
 import BlogSidebar from "./blog-sidebar";
 
-const BlogDetails = () => {
+const BlogDetails = ({ post }) => {
   return (
     <section className="blog-details pt-120 pb-40">
       <Container>
         <Row>
           <Col md={12} lg={8}>
-            <BlogContent />
+            <BlogContent data={post} />
             <Comments />
             <CommentForm />
           </Col>

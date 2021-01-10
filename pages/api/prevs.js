@@ -1,11 +1,12 @@
 import Head from "next/head";
 import ghostAPI from "./ghost";
-import _ from "lodash"
+import _ from "lodash";
 
 export default async function getPrevs(req, res) {
+  const { limit } = req;
   res = await ghostAPI.posts
     .browse({
-      limit: 3,
+      limit,
       include: "slug,title,published_at,excerpt,feature_image"
     })
     .then((posts) =>

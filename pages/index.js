@@ -25,7 +25,7 @@ import _ from "lodash";
 import getPrevs from "./api/prevs";
 
 export async function getStaticProps() {
-  const posts = await getPrevs();
+  const posts = await getPrevs({ limit: 3 });
   return {
     revalidate: 10,
     props: { posts }

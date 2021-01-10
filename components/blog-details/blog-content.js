@@ -1,24 +1,16 @@
+import moment from "moment";
 import React from "react";
 import blogDetailsImage from "../../assets/images/blog/blog-d-1-1.jpg";
+moment.locale("es");
+import _ from "lodash"
 
-const BlogContent = (props) => {
-  let { post } = props;
-  post = {
-    image:
-      "https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png",
-    title: "Writing posts with Ghost ✍️",
-    date: "2021-01-06T22:55:15.000+00:00",
-    text:
-      "Discover familiar formatting options in a functional toolbar and the ability to add dynamic content seamlessly.",
-    link: "/news-details/undefined",
-    commentCount: 0,
-    author: "Paula Contreras"
-  };
+
+const BlogContent = ({ data }) => {
   return (
     <div>
       <div className="blog-card__image">
-        <img src={blogDetailsImage} alt="" />
-        <div className="blog-card__date">20 May</div>
+        <img src={data.feature_image} alt="" />
+        <div className="blog-card__date">{_.startCase(moment(data.published_at).format("D MMMM"))}</div>
       </div>
       <div className="blog-card__meta d-flex justify-content-start mt-0 mb-0">
         <a href="news-details.html">
@@ -28,8 +20,8 @@ const BlogContent = (props) => {
           <i className="far fa-comments"></i> 2 Comments
         </a>
       </div>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <h1>{data.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: data.html }}></div>
       <div className="blog-details__meta">
         <ul className="list-unstyled blog-details__category">
           <li>

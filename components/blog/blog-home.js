@@ -1,15 +1,12 @@
 import React from "react";
-import Head from "next/head";
+import _ from "lodash";
+import moment from "moment";
 
 import { Container, Row, Col } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import BlockTitle from "../block-title";
 import BlogCard from "./blog-card";
-
-import blogImage1 from "../../assets/images/blog/blog-1-1.jpg";
-import blogImage2 from "../../assets/images/blog/blog-1-2.jpg";
-import blogImage3 from "../../assets/images/blog/blog-1-3.jpg";
 
 const BlogHome = ({ posts }) => {
   const blogCarouselOptions = {
@@ -76,7 +73,7 @@ const BlogHome = ({ posts }) => {
                 <BlogCard
                   image={image}
                   title={title}
-                  date={date}
+                  date={_.startCase(moment(date).format("D MMMM"))}
                   text={text}
                   slug={slug}
                   commentCount={commentCount}
