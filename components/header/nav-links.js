@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { categories } from "../../utils/constants";
+import _ from "lodash";
 
 const NavLinks = ({ extraClassName }) => {
   const handleDropdownStatus = (e) => {
@@ -14,21 +16,14 @@ const NavLinks = ({ extraClassName }) => {
           <a>Inicio</a>
         </Link>
       </li>
-      <li>
-        <Link href="/blog/moda">
-          <a>Moda</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/blog/lifestyle">
-          <a>Lifestyle</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/blog/cultura">
-          <a>Cultura</a>
-        </Link>
-      </li>
+      {_.map(categories, (category) => (
+        <li>
+          <Link href="/category/[category]" as={`/category/${category}`}>
+            <a>{_.startCase(category)}</a>
+          </Link>
+        </li>
+      ))}
+
       <li>
         <Link href="/about">
           <a>Conoce Áditi</a>

@@ -1,16 +1,17 @@
 import moment from "moment";
 import React from "react";
-import blogDetailsImage from "../../assets/images/blog/blog-d-1-1.jpg";
 moment.locale("es");
-import _ from "lodash"
+import _ from "lodash";
 
-
-const BlogContent = ({ data }) => {
+const BlogContent = ({ post }) => {
+  const { title, body, _created, image, slug } = post;
   return (
     <div>
       <div className="blog-card__image">
-        <img src={data.feature_image} alt="" />
-        <div className="blog-card__date">{_.startCase(moment(data.published_at).format("D MMMM"))}</div>
+        <img src={image} alt="" />
+        <div className="blog-card__date">
+          {_.startCase(moment(_created).format("D MMMM"))}
+        </div>
       </div>
       <div className="blog-card__meta d-flex justify-content-start mt-0 mb-0">
         <a href="news-details.html">
@@ -20,8 +21,8 @@ const BlogContent = ({ data }) => {
           <i className="far fa-comments"></i> 2 Comments
         </a>
       </div>
-      <h1>{data.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.html }}></div>
+      <h1>{title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: body }}></div>
       <div className="blog-details__meta">
         <ul className="list-unstyled blog-details__category">
           <li>

@@ -7,39 +7,40 @@ import BlogDetails from "../../components/blog-details";
 import Footer from "../../components/footer";
 import _ from "lodash";
 import get from "../api/get";
+import { categories } from "../../utils/constants";
+import BlogHome from "../../components/blog/blog-home";
 
 export async function getStaticProps({ params }) {
-  const { slug } = params;
-  const post = await get({ slug }, [
+  const { category } = params;
+  const posts = await get({ category }, [
     "image",
     "body",
     "_created",
     "title",
-    "slug"
+    "slug",
+    "category",
+    "excerpt"
   ]);
-  console.log(post);
   return {
-    props: { post: post[0] }
+    props: { posts, category }
   };
 }
 export async function getStaticPaths() {
-  let posts = await get(null, ["slug"]);
-  // Get the paths we want to pre-render based on posts
-  const paths = _.map(posts, (post) => {
-    return { params: { slug: post.slug } };
+  const paths = _.map(categories, (category) => {
+    return { params: { category } };
   });
-  // We'll pre-render only these paths at build time.
+
   return { paths, fallback: false };
 }
 
 const Post = (props) => {
-  const { post } = props;
+  const { posts, category } = props;
   return (
     <Layout pageTitle="News Details || Azino || Charity React Next Template">
       <HeaderOne />
       <StickyHeader />
-      <PageHeader title={post.title} crumbTitle="News" />
-      <BlogDetails post={post} />
+      <PageHeader title={_.startCase(category)} crumbTitle={category} />
+      <BlogHome posts={posts} grid={true} />
       <Footer />
     </Layout>
   );

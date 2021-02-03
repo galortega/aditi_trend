@@ -5,8 +5,7 @@ const BlogCard = ({
   image,
   title,
   date,
-  text,
-  link,
+  excerpt,
   slug,
   commentCount,
   author
@@ -36,7 +35,7 @@ const BlogCard = ({
               <a>{title}</a>
             </Link>
           </h3>
-          <p>{text}</p>
+          <p>{excerpt}</p>
           <Link href="/post/[slug]" as={`/post/${slug}`}>
             <a className="blog-card__more">
               <i className="far fa-angle-right"></i>Read More

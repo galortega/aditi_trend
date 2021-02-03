@@ -11,7 +11,7 @@ const BlogDetails = ({ post }) => {
       <Container>
         <Row>
           <Col md={12} lg={8}>
-            <BlogContent data={post} />
+            <BlogContent post={post} />
             <Comments />
             <CommentForm />
           </Col>

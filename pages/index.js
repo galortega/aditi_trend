@@ -22,10 +22,15 @@ import ServiceTwo from "../components/services/service-two";
 import AboutTwo from "../components/about/about-two";
 import Service from "../components/services/service";
 import _ from "lodash";
-import getPrevs from "./api/prevs";
+import get from "./api/get";
+import { categories } from "../utils/constants";
 
 export async function getStaticProps() {
-  const posts = await getPrevs({ limit: 3 });
+  const posts = await get(
+    { category: categories.LIFESTYLE },
+    ["slug", "excerpt", "image", "category", "_created", "_id", "title"],
+    { sort: ["_created", 1], max: 3 }
+  );
   return {
     revalidate: 10,
     props: { posts }
@@ -43,6 +48,7 @@ const HomeOne = (props) => {
 
       <VideoCardTwo />
       <BlogHome posts={props.posts} />
+
       <AboutTwo />
       <CallToActionTwo />
 
