@@ -13,7 +13,7 @@ const { headers } = restDB;
  * @param {[*]} include
  * @param {order: ["field", "1"], max: *} options
  */
-export default async function get(query, include, options) {
+export default async function get({ query, include, options, model }) {
   options = options || {};
   let { max, sort, groupBy } = options;
 
@@ -29,7 +29,7 @@ export default async function get(query, include, options) {
   const fields = {};
   _.forEach(include, (i) => Object.assign(fields, { [i]: 1 }));
 
-  const url = `${BASE_URL}?metafields=true&q=${JSON.stringify(
+  const url = `${BASE_URL}/${model}?metafields=true&q=${JSON.stringify(
     query
   )}&h={"$fields":${JSON.stringify(fields)}}${options}`;
 

@@ -45,9 +45,7 @@ const FaqOne = () => {
                   <img src={heart} width="30" alt="" />
                   Help People Now
                 </p>
-                <h3>
-                  Charity for the people <br /> you care about.
-                </h3>
+                <h3>¿Qué es Áditi Trend?</h3>
               </div>
 
               <Accordion

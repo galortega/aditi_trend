@@ -4400,6 +4400,10 @@ h6 {
   color: var(--thm-special);
 }
 
+.no-wrap {
+  word-break: break-all;
+}
+
 .comment-one .thm-btn {
   font-size: 14px;
   line-height: 1;

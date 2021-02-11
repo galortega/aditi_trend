@@ -33,13 +33,14 @@ const VideoCardTwo = () => {
               </div>
             </Col>
             <Col lg={4}>
-              <h3>We’re worldwide non-profit charity ogranization.</h3>
+              <h3>
+                Queremos que seas parte de este proyecto de moda consciente.
+              </h3>
             </Col>
             <Col lg={5}>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Have you done google research which works all the
-                time.{" "}
+                Áditi Trend es una marca de ropa femenina ecuatoriana bajo la
+                modalidad de slow fashion y stock limitado.{" "}
               </p>
             </Col>
           </Row>

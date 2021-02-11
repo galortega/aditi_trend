@@ -21,7 +21,8 @@ const CallToActionTwo = () => {
                 Help Other People
               </p>
               <h3>
-                Our fingerprints on <br /> the lives we touch <br /> never fade.
+                La filosofía slow fashion es <br /> simple y necesaria en un
+                mundo <br /> acelarado y consumista.
               </h3>
             </div>
           </Col>
@@ -31,7 +32,7 @@ const CallToActionTwo = () => {
           >
             <div className="btn-wrap">
               <Link href="#">
-                <a className="scroll-to-target thm-btn">Start Donating</a>
+                <a className="scroll-to-target thm-btn">Conoce Áditi Trend</a>
               </Link>
             </div>
           </Col>

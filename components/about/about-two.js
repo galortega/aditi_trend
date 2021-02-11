@@ -24,19 +24,23 @@ const AboutTwo = () => {
                 <p>
                   <img src={heart} width="30" alt="" /> About Azino Platform
                 </p>
-                <h3>Welcome to non-profit charity organization.</h3>
+                <h3>
+                  Conoce nuestros prendas social y ambientalmente responsables!
+                </h3>
               </div>
               <p className="mb-40 pr-10">
-                Lorem ipsum dolor sit amet, consectetur notted adipisicing elit
-                sed do eiusmod tempor incididunt simply free ut labore et dolore
-                magna aliqua simhy adndnh qkhhn.
+                Nuestras prendas son elaboradas bajo la modalidad de slow
+                fashion, que es la contraparte del movimiento fast fashion, en
+                donde se rechaza la producción masiva, y se pretende que cada
+                prenda o colección de ropa sea elaborada bajo procesos de
+                conciencia ambiental y condiciones de trabajo éticas.
               </p>
               <Row>
                 <Col md={6}>
                   <div className="about-two__box">
                     <h3>
-                      <i className="azino-icon-confirmation"></i> Become a
-                      Volunteer
+                      <i className="azino-icon-confirmation"></i> Aplicamos el
+                      principio menos es más.
                     </h3>
                     <p>
                       Lorem ipsum dolor sit ametelit sed consectetur notted.
@@ -44,8 +48,8 @@ const AboutTwo = () => {
                   </div>
                   <div className="about-two__box">
                     <h3>
-                      <i className="azino-icon-confirmation"></i> Quick
-                      Fundraising
+                      <i className="azino-icon-confirmation"></i> Tendencias
+                      sostenibles
                     </h3>
                     <p>
                       Lorem ipsum dolor sit ametelit sed consectetur notted.
@@ -55,12 +59,12 @@ const AboutTwo = () => {
                 <Col md={6}>
                   <div className="about-two__box-two">
                     <i className="azino-icon-support"></i>
-                    <h3>You can make a big difference in someone’s life.</h3>
+                    <h3>Aplicamos el principio menos es más.</h3>
                   </div>
                 </Col>
               </Row>
               <Link href="/about">
-                <a className="thm-btn dynamic-radius">Discover More</a>
+                <a className="thm-btn dynamic-radius">Descubre más</a>
               </Link>
             </div>
           </Col>

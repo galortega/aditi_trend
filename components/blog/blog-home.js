@@ -50,16 +50,16 @@ const BlogHome = ({ posts, grid }) => {
         <Row className="align-items-start align-items-md-center flex-column flex-md-row mb-60">
           <Col lg={7}>
             <BlockTitle
-              title={`Latest news & articles \n directly from the blog.`}
+              title={`Últimas noticias y artículos  \n de nuestro blog.`}
               tagLine="Blog Posts"
             />
           </Col>
           <Col lg={5} className="d-flex">
             <div className="my-auto">
               <p className="block-text pr-10 mb-0">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Have you done google research which works all the
-                time.{" "}
+                Compartiremos con nuestra comunidad todas las semanas artículos
+                relacionados con moda, lifestyle y cultura, si te interesan
+                estos temas suscríbete a nuestro newsletter!{" "}
               </p>
             </div>
           </Col>

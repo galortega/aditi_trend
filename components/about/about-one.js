@@ -30,14 +30,15 @@ const AboutOne = () => {
                   <img src={heart} width="30" alt="" />
                   Make a Difference
                 </p>
-                <h3>Let’s help them together.</h3>
+                <h3>¿Por qué Áditi Trend? </h3>
               </div>
             </Col>
             <Col md={12} lg={4}>
               <p className="team-about__top-text">
-                Tincidunt elit magnis nulla facilisis sagittis is maecenas.
-                Sapien nunced amet ultrices, dolores sit ipsum velit purus
-                aliquet, massa fringilla leo orci ipsum dolor sit.
+                El origen del nombre se remonta al vedismo (pre-hinduísmo).
+                Áditi es conocida como madre de los dioses, personifica a la
+                tierra; entre algunas de sus cualidades se destaca como libre.
+                creativa y poderosa.
               </p>
             </Col>
             <Col md={12} lg={4}>

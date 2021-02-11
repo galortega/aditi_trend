@@ -7,20 +7,24 @@ import BlogDetails from "../../components/blog-details";
 import Footer from "../../components/footer";
 import _ from "lodash";
 import get from "../api/get";
-import { categories } from "../../utils/constants";
+import { categories, models } from "../../utils/constants";
 import BlogHome from "../../components/blog/blog-home";
 
 export async function getStaticProps({ params }) {
   const { category } = params;
-  const posts = await get({ category }, [
-    "image",
-    "body",
-    "_created",
-    "title",
-    "slug",
-    "category",
-    "excerpt"
-  ]);
+  const posts = await get({
+    model: models.BLOG,
+    query: { category },
+    include: [
+      "image",
+      "body",
+      "_created",
+      "title",
+      "slug",
+      "category",
+      "excerpt"
+    ]
+  });
   return {
     props: { posts, category }
   };
@@ -39,7 +43,10 @@ const Post = (props) => {
     <Layout pageTitle="News Details || Azino || Charity React Next Template">
       <HeaderOne />
       <StickyHeader />
-      <PageHeader title={_.startCase(category)} crumbTitle={category} />
+      <PageHeader
+        title={_.startCase(category)}
+        crumbTitle={_.startCase(category)}
+      />
       <BlogHome posts={posts} grid={true} />
       <Footer />
     </Layout>

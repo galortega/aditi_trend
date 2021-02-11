@@ -59,16 +59,9 @@ const TestimonialsTwo = () => {
           <Row className="align-items-center">
             <Col md={12} lg={7}>
               <BlockTitle
-                title={`What they are talking \n about azino.`}
+                title={`Nuestra razón de ser.`}
                 tagLine="Our Testimonials"
               />
-            </Col>
-            <Col md={12} lg={5}>
-              <p className="team-about__top-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Have you done google research which works all the
-                time.
-              </p>
             </Col>
           </Row>
         </div>

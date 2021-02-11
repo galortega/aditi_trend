@@ -46,16 +46,9 @@ const TestimonialsOne = () => {
                   Our Testimonials
                 </p>
                 <h3>
-                  What they are talking <br /> about azino.
+                  Que opinan de <br /> Áditi Trend.
                 </h3>
               </div>
-            </Col>
-            <Col md={12} lg={5}>
-              <p className="team-about__top-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Have you done google research which works all the
-                time.{" "}
-              </p>
             </Col>
           </Row>
         </div>

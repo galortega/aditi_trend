@@ -12,7 +12,7 @@ const { headers } = restDB;
  */
 export default async function put(id, body) {
   _.assign(headers, { "content-type": "application/json" });
-  const url = `${BASE_URL}/${id}`;
+  const url = `${BASE_URL}/blog/${id}`;
   try {
     const res = await axios.put(url, JSON.stringify(body), { headers });
     return res;

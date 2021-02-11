@@ -7,23 +7,21 @@ import BlogDetails from "../../components/blog-details";
 import Footer from "../../components/footer";
 import _ from "lodash";
 import get from "../api/get";
+import { models } from "../../utils/constants";
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const post = await get({ slug }, [
-    "image",
-    "body",
-    "_created",
-    "title",
-    "slug"
-  ]);
-  console.log(post);
+  const post = await get({
+    model: models.BLOG,
+    query: { slug },
+    include: ["image", "body", "_created", "title", "slug"]
+  });
   return {
     props: { post: post[0] }
   };
 }
 export async function getStaticPaths() {
-  let posts = await get(null, ["slug"]);
+  let posts = await get({ model: models.BLOG, include: ["slug"] });
   // Get the paths we want to pre-render based on posts
   const paths = _.map(posts, (post) => {
     return { params: { slug: post.slug } };

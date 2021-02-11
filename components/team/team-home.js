@@ -3,88 +3,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import heartImage from "../../assets/images/shapes/leaves-2-1.png";
 import bgImage from "../../assets/images/team/team-map-1-1.png";
 import teamImage1 from "../../assets/images/team/team-2-1.jpg";
-import teamImage2 from "../../assets/images/team/team-2-2.jpg";
-import teamImage3 from "../../assets/images/team/team-2-3.jpg";
-import teamImage4 from "../../assets/images/team/team-2-4.jpg";
 
 const TeamData = [
   {
     image: teamImage1,
     extraClassName: "content-bg-1",
-    name: "Isabel Herrera",
-    designation: "Student",
-    social: [
-      {
-        link: "#",
-        socialClass: "fab fa-twitter"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-facebook-square"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-pinterest-p"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-instagram"
-      }
-    ]
-  },
-  {
-    image: teamImage2,
-    extraClassName: "content-bg-2",
-    name: "Nathan Wheeler",
-    designation: "Student",
-    social: [
-      {
-        link: "#",
-        socialClass: "fab fa-twitter"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-facebook-square"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-pinterest-p"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-instagram"
-      }
-    ]
-  },
-  {
-    image: teamImage3,
-    extraClassName: "content-bg-3",
-    name: "Warren Shaw",
-    designation: "Student",
-    social: [
-      {
-        link: "#",
-        socialClass: "fab fa-twitter"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-facebook-square"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-pinterest-p"
-      },
-      {
-        link: "#",
-        socialClass: "fab fa-instagram"
-      }
-    ]
-  },
-  {
-    image: teamImage4,
-    extraClassName: "content-bg-4",
-    name: "Hallie Wallace",
-    designation: "Student",
+    name: "Paula Contreras",
+    designation: "Licenciada en Turismo",
     social: [
       {
         link: "#",
@@ -122,7 +47,7 @@ const TeamHome = () => {
                   Our Volunteers
                 </p>
                 <h3>
-                  Meet those who help <br /> others in need.
+                  Conoce quién está detrás <br /> de este proyecto.
                 </h3>
               </div>
             </Col>

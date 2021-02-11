@@ -16,8 +16,8 @@ const NavLinks = ({ extraClassName }) => {
           <a>Inicio</a>
         </Link>
       </li>
-      {_.map(categories, (category) => (
-        <li>
+      {_.map(categories, (category, index) => (
+        <li key={index}>
           <Link href="/category/[category]" as={`/category/${category}`}>
             <a>{_.startCase(category)}</a>
           </Link>

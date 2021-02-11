@@ -5,6 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import logoLight from "../assets/images/logo-light.png";
 import blogPost1 from "../assets/images/resources/footer-img-1-1.jpg";
 import blogPost2 from "../assets/images/resources/footer-img-1-2.jpg";
+import { categories } from "../utils/constants";
+import _ from "lodash";
 
 const Footer = () => {
   return (
@@ -51,48 +53,39 @@ const Footer = () => {
                 <h3 className="footer-widget__title">Explore</h3>
                 <ul className="list-unstyled footer-widget__link-list">
                   <li>
-                    <Link href="/causes">
-                      <a>Our Causes</a>
+                    <Link href="/">
+                      <a>Inicio</a>
                     </Link>
                   </li>
+                  {_.map(categories, (category, index) => (
+                    <li key={index}>
+                      <Link
+                        href="/category/[category]"
+                        as={`/category/${category}`}
+                      >
+                        <a>{_.startCase(category)}</a>
+                      </Link>
+                    </li>
+                  ))}
+
                   <li>
                     <Link href="/about">
-                      <a>About us</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/news">
-                      <a>New Campaign</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/events">
-                      <a>Upcoming Events</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about">
-                      <a>Site Map</a>
+                      <a>Conoce Áditi</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <a>Help</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/causes">
-                      <a>Donate</a>
+                      <a>Contactános</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <a>Contact us</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contact">
-                      <a>Terms</a>
+                      <a>
+                        <>
+                          <a>Tienda</a>
+                          <i className="fa-shopping-bag ml-2"></i>
+                        </>
+                      </a>
                     </Link>
                   </li>
                 </ul>

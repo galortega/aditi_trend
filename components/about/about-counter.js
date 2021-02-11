@@ -26,15 +26,23 @@ const AboutCounter = () => {
                 <img src={heartImage} width="30" alt="" />
                 Help People Now
               </p>
-              <h3>
-                Charity for the people <br />
-                you care about.
-              </h3>
+              <h3>¿Qué es Áditi Trend?</h3>
             </div>
             <p className="about-counter__text">
-              Lorem Ipsum is simply dummy text of the printing and <br />{" "}
-              typesetting industry. Have you done google research which <br />{" "}
-              works all the time.{" "}
+              Aditi Trend es una marca de ropa femenina ecuatoriana radicada en{" "}
+              <br />
+              Guayaquil en el año 2020. El público objetivo de Áditi Trend son{" "}
+              <br />
+              mujeres jóvenes, conocedoras de las últimas tendencias en moda,{" "}
+              <br />
+              con conciencia ambiental y consumidoras habituales de marcas{" "}
+              <br />
+              productoras de slow fashion y pequeños emprendimientos <br />
+              promocionados a través de redes sociales. El estilo de Áditi Trend{" "}
+              <br />
+              es fresco, juvenil y minimalista, incorporando en sus prendas{" "}
+              <br />
+              tejidos naturales.
             </p>
             <ul className="list-unstyled ul-list-one">
               <li>Nsectetur cing elit.</li>

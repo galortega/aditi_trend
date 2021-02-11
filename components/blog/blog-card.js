@@ -38,7 +38,7 @@ const BlogCard = ({
           <p>{excerpt}</p>
           <Link href="/post/[slug]" as={`/post/${slug}`}>
             <a className="blog-card__more">
-              <i className="far fa-angle-right"></i>Read More
+              <i className="far fa-angle-right"></i>Ver más
             </a>
           </Link>
         </div>

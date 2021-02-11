@@ -5,9 +5,10 @@ import StickyHeader from "../components/header/sticky-header";
 import PageHeader from "../components/page-header";
 import BlogDetails from "../components/blog-details";
 import Footer from "../components/footer";
+import { models } from "../utils/constants";
 
 export async function getStaticProps() {
-  const posts = await getPosts();
+  const posts = await getPosts({ model: models.BLOG });
   return {
     revalidate: 10,
     props: { posts }
