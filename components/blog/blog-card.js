@@ -11,7 +11,7 @@ const BlogCard = ({
   author
 }) => {
   return (
-    <div className="blog-card">
+    <div className="blog-card " >
       <div className="blog-card__inner">
         <div className="blog-card__image">
           <img src={image} alt="" />
@@ -35,7 +35,7 @@ const BlogCard = ({
               <a>{title}</a>
             </Link>
           </h3>
-          <p>{excerpt}</p>
+          <p style={{ height: "15vh" }}>{excerpt}</p>
           <Link href="/post/[slug]" as={`/post/${slug}`}>
             <a className="blog-card__more">
               <i className="far fa-angle-right"></i>Ver más

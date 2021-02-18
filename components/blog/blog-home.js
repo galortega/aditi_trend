@@ -7,7 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import BlockTitle from "../block-title";
 import BlogCard from "./blog-card";
-import { Fragment } from "react";
+
+const { MEDIA_URL } = process.env;
 
 const BlogHome = ({ posts, grid }) => {
   const blogCarouselOptions = {
@@ -66,43 +67,40 @@ const BlogHome = ({ posts, grid }) => {
         </Row>
         <Swiper {...blogCarouselOptions}>
           {grid ? (
-            <Row>
-              {posts.map(
-                (
-                  {
-                    image,
-                    title,
-                    _created,
-                    excerpt,
-                    slug,
-                    commentCount,
-                    author
-                  },
-                  index
-                ) => (
-                  <Col sm="4" key={index}>
-                    <BlogCard
-                      image={`https://aditiback-31d1.restdb.io/media/${image[0]}`}
-                      title={title}
-                      date={_.startCase(moment(_created).format("D MMMM"))}
-                      excerpt={excerpt}
-                      slug={slug}
-                      commentCount={commentCount}
-                      author={author}
-                    />
-                  </Col>
-                )
-              )}
+            <Row className="row-eq-height">
+              posts.map( (
+              {(imagen, title, _created, excerpt, slug, commentCount, author)},
+              index ) => (
+              <Col sm="4" key={index}>
+                <BlogCard
+                  image={imagen[0]}
+                  title={title}
+                  date={_.startCase(moment(_created).format("D MMMM"))}
+                  excerpt={excerpt}
+                  slug={slug}
+                  commentCount={commentCount}
+                  author={author}
+                />
+              </Col>
+              ) )
             </Row>
           ) : (
             posts.map(
               (
-                { image, title, _created, excerpt, slug, commentCount, author },
+                {
+                  imagen,
+                  title,
+                  _created,
+                  excerpt,
+                  slug,
+                  commentCount,
+                  author
+                },
                 index
               ) => (
                 <SwiperSlide key={index}>
                   <BlogCard
-                    image={`https://aditiback-31d1.restdb.io/media/${image[0]}`}
+                    image={imagen[0]}
                     title={title}
                     date={_.startCase(moment(_created).format("D MMMM"))}
                     excerpt={excerpt}

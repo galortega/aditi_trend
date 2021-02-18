@@ -75,12 +75,12 @@ const BlogPage = () => {
         <div className="news-3-col">
           {BLOG_DATA.map(
             (
-              { image, title, date, text, link, commentCount, author },
+              { imagen, title, date, text, link, commentCount, author },
               index
             ) => (
               <BlogCard
                 key={index}
-                image={image}
+                image={imagen[0]}
                 title={title}
                 date={date}
                 text={text}

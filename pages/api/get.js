@@ -4,7 +4,7 @@ import axios from "axios";
 import put from "./put";
 import { categories } from "../../utils/constants";
 
-const { BASE_URL } = process.env;
+const { BASE_URL, MEDIA_URL } = process.env;
 const { headers } = restDB;
 
 /**
@@ -29,13 +29,23 @@ export default async function get({ query, include, options, model }) {
   const fields = {};
   _.forEach(include, (i) => Object.assign(fields, { [i]: 1 }));
 
-  const url = `${BASE_URL}/${model}?metafields=true&q=${JSON.stringify(
+  const url = `${BASE_URL}${model}?metafields=true&q=${JSON.stringify(
     query
   )}&h={"$fields":${JSON.stringify(fields)}}${options}`;
 
   try {
     const res = await axios.get(url, { headers });
-    return res.data;
+    return _.some(res.data, (r) => !_.isEmpty(r.imagen))
+      ? _.map(res.data, (r) => {
+          r.imagen = !_.isEmpty(r.imagen)
+            ? _.map(r.imagen, (i) => {
+                return MEDIA_URL + i;
+              })
+            : [];
+          console.log({ r });
+          return r;
+        })
+      : res.data;
   } catch (error) {
     console.log(error.response.data);
   }

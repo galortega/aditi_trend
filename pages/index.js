@@ -23,7 +23,7 @@ export async function getStaticProps() {
     include: [
       "slug",
       "excerpt",
-      "image",
+      "imagen",
       "category",
       "_created",
       "_id",

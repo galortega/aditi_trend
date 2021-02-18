@@ -35,7 +35,7 @@ const NavLinks = ({ extraClassName }) => {
         </Link>
       </li>
       <li>
-        <Link href="/contact">
+        <Link href="/shop">
           <a>
             <>
               <a>Tienda</a>
