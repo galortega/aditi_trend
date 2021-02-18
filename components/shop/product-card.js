@@ -87,6 +87,7 @@ const ActionList = ({ count, cartCount, increase, decrease }) => {
         style={{
           backgroundColor: "goldenrod"
         }}
+        offset={[-8, 8]}
       >
         <AntButton
           shape="circle"
