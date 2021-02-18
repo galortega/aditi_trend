@@ -92,6 +92,7 @@ const ActionList = ({ count, cartCount, increase, decrease }) => {
           shape="circle"
           icon={<PlusCircleOutlined key="increase" />}
           type="text"
+          size="large"
           onClick={increase}
         ></AntButton>
       </AntBadge>
@@ -101,6 +102,7 @@ const ActionList = ({ count, cartCount, increase, decrease }) => {
         shape="circle"
         icon={<MinusCircleOutlined key="decrease" />}
         type="text"
+        size="large"
         onClick={decrease}
       ></AntButton>
     </Tooltip>,
@@ -109,6 +111,7 @@ const ActionList = ({ count, cartCount, increase, decrease }) => {
         shape="circle"
         icon={<WhatsAppOutlined key="whatsapp" />}
         type="text"
+        size="large"
       ></AntButton>
     </Tooltip>
   ];
