@@ -22,7 +22,7 @@ const { MEDIA_URL } = process.env;
 
 const TABS = [
   { key: "datos", tab: "👁‍🗨" },
-  { key: "opciones", tab: "✨" }
+  { key: "opciones", tab: "Talla y color" }
 ];
 
 const RadioTallas = ({ tallas, talla, handleTalla, extra }) => (
@@ -221,16 +221,9 @@ const ProductCard = ({
       tabList={TABS}
       activeTabKey={tab.key}
       onTabChange={(key) => handleTab(key, "key")}
-      bodyStyle={{ height: "10vh" }}
+      bodyStyle={{ height: "13vh" }}
+      headStyle={{ textAlign: "center" }}
       title={_.toUpper(modelo)}
-      extra={
-        <RadioTallas
-          tallas={tallas}
-          talla={talla}
-          handleTalla={handleTalla}
-          extra
-        />
-      }
       cover={
         <img
           alt={modelo}
