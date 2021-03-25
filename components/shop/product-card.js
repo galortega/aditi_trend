@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { ButtonGroup, Badge, Row, Col } from "react-bootstrap";
+import { Badge, Row, Col } from "react-bootstrap";
 import {
   Card,
   Button as AntButton,
@@ -13,12 +13,10 @@ import {
   MinusCircleOutlined,
   WhatsAppOutlined
 } from "@ant-design/icons";
-import "antd/dist/antd.css";
 import _ from "lodash";
+import { RadioColores } from "../misc/colorRadio";
 
 const { Meta } = Card;
-
-const { MEDIA_URL } = process.env;
 
 const TABS = [
   { key: "datos", tab: "👁‍🗨" },
@@ -46,36 +44,6 @@ const RadioTallas = ({ tallas, talla, handleTalla, extra }) => (
         </Radio.Button>
       ))}
     </Radio.Group>
-  </Col>
-);
-
-const RadioColores = ({ colour, colores, handleColor }) => (
-  <Col xs="6" className="text-right">
-    <div className="col-12 text-right mb-1">
-      <Badge variant="light" pill>
-        Colores
-      </Badge>
-    </div>
-    <ButtonGroup value={colour}>
-      {_.map(colores, (color, index) => {
-        return (
-          <AntButton
-            key={index}
-            onClick={(e) => handleColor(color)}
-            size={colour !== color ? "small" : "middle"}
-            className="px-0 py-0"
-            style={{ borderColor: "rgb(28, 29, 22)" }}
-            ghost
-          >
-            <Tag
-              color={color}
-              className="py-0 my-0"
-              style={{ height: "100%", width: "100%" }}
-            ></Tag>
-          </AntButton>
-        );
-      })}
-    </ButtonGroup>
   </Col>
 );
 
@@ -129,48 +97,68 @@ const ProductCard = ({
   cart,
   setCart
 }) => {
-  const [count, setCount] = useState(0);
-  const [isAdded, setIsAdded] = useState(false);
+  const [qty, setQty] = useState(0);
+  const [added, setAdded] = useState(false);
   const [colour, setColour] = useState(colores[0]);
   const [talla, setTalla] = useState(tallas[0]);
   const [tab, setTab] = useState(TABS[0]);
 
   const increase = () => {
-    let copyCount = count;
-    setCount(++copyCount);
-    setIsAdded(true);
+    let copyCount = qty;
+    setQty(++copyCount);
+    setAdded(true);
   };
 
   const decrease = () => {
-    let copyCount = count;
-    setCount(--copyCount);
+    let copyCount = qty;
+    setQty(--copyCount);
     if (copyCount <= 0) {
-      setCount(0);
-      setIsAdded(false);
+      setQty(0);
+      setAdded(false);
     }
   };
 
+  const handleItemDetail = (item) =>
+    _.chain(item[modelo].data)
+      .groupBy("id")
+      .toPairs()
+      .forEach((v) => {
+        const qty = v[1].length;
+        v[1] = _.head(v[1]);
+        v[1].qty = qty;
+      })
+      .fromPairs()
+      .value();
+
   const handleCart = () => {
     const item = {
-      count,
-      precio
+      qty,
+      precio,
+      imagen
     };
     const copyOfCart = { ...cart };
-    if (isAdded) {
+    if (added) {
       const updatedItem = {};
       updatedItem[modelo] = item;
 
-      if (!cart[modelo]) {
-        updatedItem[modelo].data = [{ talla, color: colour }];
+      if (_.isEmpty(copyOfCart[modelo])) {
+        _.assign(updatedItem[modelo], {
+          data: [{ talla, color: colour, id: talla + colour }],
+          imagen
+        });
       } else {
-        if (cart[modelo].count < count)
-          updatedItem[modelo].data = _.concat(cart[modelo].data, {
+        if (copyOfCart[modelo].qty < qty) {
+          updatedItem[modelo].data = _.concat(copyOfCart[modelo].data, {
             talla,
-            color: colour
+            color: colour,
+            id: talla + colour
           });
-        else updatedItem[modelo].data = _.initial(cart[modelo].data);
+        } else {
+          updatedItem[modelo].data = _.initial(copyOfCart[modelo].data);
+        }
       }
 
+      updatedItem[modelo].description = handleItemDetail(updatedItem);
       setCart({ ...cart, ...updatedItem });
     } else {
       delete copyOfCart[modelo];
@@ -191,14 +179,21 @@ const ProductCard = ({
   };
 
   const contentList = {
-    datos: <Meta title={`$${precio}`} description={descripcion} />,
-    opciones: (
+    datos: (
       <Row>
         <Col xs="12" className="mb-1 ml-2">
+          <Meta title={`$${precio}`} description={descripcion} />
+        </Col>
+      </Row>
+    ),
+    opciones: (
+      <Row>
+        <Col xs="12">
           <Meta title={`$${precio}`} />
         </Col>
         <RadioTallas tallas={tallas} talla={talla} handleTalla={handleTalla} />
         <RadioColores
+          botonClassNames="mr-1"
           colour={colour}
           colores={colores}
           handleColor={handleColor}
@@ -209,15 +204,12 @@ const ProductCard = ({
 
   useEffect(() => {
     handleCart();
-    return () => {
-      handleCart();
-    };
-  }, [count, isAdded]);
+  }, [qty, added]);
 
   useEffect(() => {
-    if (isAdded) handleTab("opciones", "key");
+    if (added) handleTab("opciones", "key");
     else handleTab("datos", "key");
-  }, [isAdded]);
+  }, [added]);
 
   return (
     <Card
@@ -225,21 +217,12 @@ const ProductCard = ({
       tabList={TABS}
       activeTabKey={tab.key}
       onTabChange={(key) => handleTab(key, "key")}
-      bodyStyle={{ height: "13vh" }}
+      bodyStyle={{ height: "14vh" }}
       headStyle={{ textAlign: "center" }}
       title={_.toUpper(modelo)}
-      cover={
-        <img
-          alt={modelo}
-          src={
-            _.isEmpty(imagen)
-              ? "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-              : imagen[0]
-          }
-        />
-      }
+      cover={<img alt={modelo} src={imagen[0]} />}
       actions={ActionList({
-        count,
+        count: qty,
         cartCount: cart[modelo] ? cart[modelo].count : 0,
         increase,
         decrease

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import _ from "lodash";
-import { Drawer } from "antd";
 import { Container, Row, Col } from "react-bootstrap";
 
 import ProductCard from "./product-card";
@@ -12,14 +11,10 @@ const ShopHome = ({ products }) => {
   const [total, setTotal] = useState(0);
   const [drawer, setDrawer] = useState(null);
 
-  const onClose = () => {
-    setDrawer(false);
-  };
-
   useEffect(() => {
     if (!_.isEmpty(cart)) {
       setDrawer(true);
-      setTotal(_.sumBy(_.values(cart), (item) => item.precio * item.count));
+      setTotal(_.sumBy(_.values(cart), (item) => item.precio * item.qty));
     } else setDrawer(false);
   }, [cart]);
 
@@ -57,38 +52,14 @@ const ShopHome = ({ products }) => {
           )}
         </Row>
       </Container>
-      <Drawer
-        title="Basic Drawer"
-        placement="right"
-        onClose={onClose}
-        visible={drawer}
-        maskClosable={true}
-        mask={false}
-        getContainer={false}
-      >
-        <div className="my-auto">
-          <ul>
-            {_.map(_.keys(cart), (modelo, index) => (
-              <Fragment>
-                <li key={index}>
-                  {modelo}: - {cart[modelo].count} - ${cart[modelo].precio}{" "}
-                  <br />
-                </li>
-                <ul>
-                  {_.map(cart[modelo].data, (d, index) => (
-                    <li key={index}>
-                      talla: {d.talla}
-                      <br />
-                      color: {d.color}
-                    </li>
-                  ))}
-                </ul>
-              </Fragment>
-            ))}
-          </ul>
-          <h6>total: {total}</h6>
-        </div>
-      </Drawer>
+      <Cart
+        cart={cart}
+        setCart={setCart}
+        drawer={drawer}
+        setDrawer={setDrawer}
+        total={total}
+        setTotal={setTotal}
+      />
     </section>
   );
 };

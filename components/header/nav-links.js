@@ -7,7 +7,6 @@ const NavLinks = ({ extraClassName }) => {
   const handleDropdownStatus = (e) => {
     let clickedItem = e.currentTarget.parentNode;
     clickedItem.querySelector(".dropdown-list").classList.toggle("show");
-    console.log({ e });
   };
   return (
     <ul className={`main-menu__list ${extraClassName}`}>

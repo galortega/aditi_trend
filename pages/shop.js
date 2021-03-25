@@ -22,7 +22,6 @@ export async function getStaticProps() {
     ],
     model: models.PRODUCT
   });
-  console.log(_.find(products, (p) => !_.isEmpty(p.imagen)));
   return {
     revalidate: 10,
     props: { products }

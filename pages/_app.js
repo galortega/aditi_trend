@@ -6,6 +6,8 @@ import "../assets/css/azino-icons.css";
 import "../assets/css/fontawesome-all.min.css";
 import "../assets/css/main.css";
 import "swiper/swiper-bundle.min.css";
+import "../style/css/antd.css"
+
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {

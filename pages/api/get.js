@@ -7,6 +7,21 @@ import { categories } from "../../utils/constants";
 const { BASE_URL, MEDIA_URL } = process.env;
 const { headers } = restDB;
 
+const handleImages = (data) => {
+  return _.some(data, (r) => !_.isEmpty(r.imagen))
+    ? _.map(data, (r) => {
+        r.imagen = !_.isEmpty(r.imagen)
+          ? _.map(r.imagen, (i) => {
+              return MEDIA_URL + i;
+            })
+          : [
+              "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+            ];
+        return r;
+      })
+    : data;
+};
+
 /**
  *
  * @param {{*}} query
@@ -32,20 +47,11 @@ export default async function get({ query, include, options, model }) {
   const url = `${BASE_URL}${model}?metafields=true&q=${JSON.stringify(
     query
   )}&h={"$fields":${JSON.stringify(fields)}}${options}`;
-
   try {
-    const res = await axios.get(url, { headers });
-    return _.some(res.data, (r) => !_.isEmpty(r.imagen))
-      ? _.map(res.data, (r) => {
-          r.imagen = !_.isEmpty(r.imagen)
-            ? _.map(r.imagen, (i) => {
-                return MEDIA_URL + i;
-              })
-            : [];
-          console.log({ r });
-          return r;
-        })
-      : res.data;
+    const res = handleImages(
+      await axios.get(url, { headers }).then((r) => r.data)
+    );
+    return res;
   } catch (error) {
     console.log(error.response.data);
   }
