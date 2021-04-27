@@ -19,15 +19,16 @@ export const RadioColores = ({
     <ButtonGroup value={colour}>
       {_.map(colores, (color, index) => {
         return (
-          <ColorBoton
-            classNames={botonClassNames}
-            color={color}
-            colour={colour}
-            handleColor={handleColor}
-            borderRadius={borderRadius}
-            children={children}
-            index={index}
-          />
+          <Fragment key={index}>
+            <ColorBoton
+              classNames={botonClassNames}
+              color={color}
+              colour={colour}
+              handleColor={handleColor}
+              borderRadius={borderRadius}
+              children={children}
+            />
+          </Fragment>
         );
       })}
     </ButtonGroup>

@@ -59,17 +59,6 @@ const HomeOne = (props) => {
         <TestimonialsTwo />
       </GalleryTestimonials>
 
-      {/*<AboutCounter />
-      <CausesHome />
-      <CallToActionTwo />
-      <DonationOptions />
-      <GalleryTestimonials>
-        <GalleryHome />
-        <TestimonialsTwo />
-      </GalleryTestimonials>
-      <CallToAction />
-      <GoogleMap extraClass="home" />
-      <BrandCarousel extraClass="client-carousel__has-top-shadow" />*/}
       <Footer />
     </Layout>
   );

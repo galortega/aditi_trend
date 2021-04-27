@@ -1,13 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { categories } from "../../utils/constants";
 import _ from "lodash";
 
 const NavLinks = ({ extraClassName }) => {
-  const handleDropdownStatus = (e) => {
+  const router = useRouter();
+  const { route } = router;
+
+  /*const handleDropdownStatus = (e) => {
     let clickedItem = e.currentTarget.parentNode;
     clickedItem.querySelector(".dropdown-list").classList.toggle("show");
-  };
+  };*/
   return (
     <ul className={`main-menu__list ${extraClassName}`}>
       <li>
@@ -35,23 +39,11 @@ const NavLinks = ({ extraClassName }) => {
       </li>
       <li>
         <Link href="/shop">
-          <a>
-            <>
-              <a>Tienda</a>
-              <i className="fa-shopping-bag ml-2"></i>
-            </>
-          </a>
+          <a>Tienda</a>
         </Link>
       </li>
       <li className="search-btn search-toggler">
         <span>
-          {/* <input
-            type="email"
-            name="EMAIL"
-            id="mc-email"
-            className=""
-            placeholder="Email address"
-         />*/}
           <i className="azino-icon-magnifying-glass"></i>
         </span>
       </li>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment, useContext } from "react";
 import { Badge, Row, Col } from "react-bootstrap";
 import {
   Card,
@@ -15,6 +15,7 @@ import {
 } from "@ant-design/icons";
 import _ from "lodash";
 import { RadioColores } from "../misc/colorRadio";
+import { Context } from "../../context/storage";
 
 const { Meta } = Card;
 
@@ -93,20 +94,21 @@ const ProductCard = ({
   colores,
   tallas,
   imagen,
-  _created,
-  cart,
-  setCart
+  _created
 }) => {
   const [qty, setQty] = useState(0);
-  const [added, setAdded] = useState(false);
+  const [isAdded, setIsAdded] = useState(false);
   const [colour, setColour] = useState(colores[0]);
   const [talla, setTalla] = useState(tallas[0]);
   const [tab, setTab] = useState(TABS[0]);
 
+  const [state, dispatch] = useContext(Context);
+  const { items } = state;
+
   const increase = () => {
     let copyCount = qty;
     setQty(++copyCount);
-    setAdded(true);
+    setIsAdded(true);
   };
 
   const decrease = () => {
@@ -114,11 +116,11 @@ const ProductCard = ({
     setQty(--copyCount);
     if (copyCount <= 0) {
       setQty(0);
-      setAdded(false);
+      setIsAdded(false);
     }
   };
 
-  const handleItemDetail = (item) =>
+  const handleDetalleItem = (item) =>
     _.chain(item[modelo].data)
       .groupBy("id")
       .toPairs()
@@ -136,33 +138,42 @@ const ProductCard = ({
       precio,
       imagen
     };
-    const copyOfCart = { ...cart };
-    if (added) {
+    const copyOfCart = { ...items };
+    if (isAdded) {
+      // Item se encuentra en el carrito o se está agregando por primera vez
       const updatedItem = {};
       updatedItem[modelo] = item;
 
       if (_.isEmpty(copyOfCart[modelo])) {
+        // Item se agrega por primera vez
         _.assign(updatedItem[modelo], {
           data: [{ talla, color: colour, id: talla + colour }],
           imagen
         });
       } else {
+        // Item ya se encuentra en el carrito
         if (copyOfCart[modelo].qty < qty) {
+          // Subir cantidad
+          console.log("object");
           updatedItem[modelo].data = _.concat(copyOfCart[modelo].data, {
             talla,
             color: colour,
             id: talla + colour
           });
         } else {
+          // Bajar cantidad
           updatedItem[modelo].data = _.initial(copyOfCart[modelo].data);
         }
       }
 
-      updatedItem[modelo].description = handleItemDetail(updatedItem);
-      setCart({ ...cart, ...updatedItem });
+      updatedItem[modelo].description = handleDetalleItem(updatedItem);
+      dispatch({
+        type: "SET_CART_ITEMS",
+        payload: _.assignIn(copyOfCart, updatedItem)
+      });
     } else {
       delete copyOfCart[modelo];
-      setCart({ ...copyOfCart });
+      dispatch({ type: "SET_CART_ITEMS", payload: { ...copyOfCart } });
     }
   };
 
@@ -204,12 +215,12 @@ const ProductCard = ({
 
   useEffect(() => {
     handleCart();
-  }, [qty, added]);
+  }, [qty, isAdded]);
 
   useEffect(() => {
-    if (added) handleTab("opciones", "key");
+    if (isAdded) handleTab("opciones", "key");
     else handleTab("datos", "key");
-  }, [added]);
+  }, [isAdded]);
 
   return (
     <Card
@@ -223,7 +234,7 @@ const ProductCard = ({
       cover={<img alt={modelo} src={imagen[0]} />}
       actions={ActionList({
         count: qty,
-        cartCount: cart[modelo] ? cart[modelo].count : 0,
+        cartCount: items[modelo] ? items[modelo].count : 0,
         increase,
         decrease
       })}

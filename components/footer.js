@@ -31,19 +31,13 @@ const Footer = () => {
                 </p>
                 <ul className="list-unstyled footer-widget__contact">
                   <li>
-                    <a href="#">
-                      <i className="azino-icon-telephone"></i>096 369 4764
-                    </a>
+                    <i className="azino-icon-telephone"></i>096 369 4764
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="azino-icon-email"></i>adititrend@gmail.com
-                    </a>
+                    <i className="azino-icon-email"></i>adititrend@gmail.com
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="azino-icon-pin"></i>Guayaquil, Ecuador
-                    </a>
+                    <i className="azino-icon-pin"></i>Guayaquil, Ecuador
                   </li>
                 </ul>
               </div>
@@ -79,13 +73,8 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact">
-                      <a>
-                        <>
-                          <a>Tienda</a>
-                          <i className="fa-shopping-bag ml-2"></i>
-                        </>
-                      </a>
+                    <Link href="/shop">
+                      <a>Tienda</a>
                     </Link>
                   </li>
                 </ul>

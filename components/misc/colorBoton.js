@@ -8,12 +8,11 @@ export const ColorBoton = ({
   colour,
   handleColor,
   borderRadius,
-  index,
   text
 }) => (
   <AntButton
-    key={index}
     shape="circle"
+    type="text"
     onClick={(e) => (handleColor ? handleColor(color) : console.log())}
     size={colour !== color ? "small" : "middle"}
     className={"my-auto p-0 fluid" + classNames}

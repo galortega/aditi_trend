@@ -51,6 +51,7 @@ export default async function get({ query, include, options, model }) {
     const res = handleImages(
       await axios.get(url, { headers }).then((r) => r.data)
     );
+    console.log(res);
     return res;
   } catch (error) {
     console.log(error.response.data);

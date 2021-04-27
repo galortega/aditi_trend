@@ -10,8 +10,9 @@ const BlogCard = ({
   commentCount,
   author
 }) => {
+  console.log({ image });
   return (
-    <div className="blog-card " >
+    <div className="blog-card ">
       <div className="blog-card__inner">
         <div className="blog-card__image">
           <img src={image} alt="" />

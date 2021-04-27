@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import pageHeaderBg from "../assets/images/main-slider/banner-1.png";
 
-const PageHeader = ({ title, crumbTitle }) => {
+const PageHeader = ({ title, crumbTitle, children }) => {
   return (
     <section className="page-header">
       <div
@@ -22,6 +22,12 @@ const PageHeader = ({ title, crumbTitle }) => {
           <li>
             <span>{crumbTitle}</span>
           </li>
+          {children && (
+            <>
+              <li>-</li>
+              <li>{children}</li>
+            </>
+          )}
         </ul>
       </div>
     </section>

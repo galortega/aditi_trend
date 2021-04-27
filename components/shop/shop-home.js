@@ -1,22 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { Context } from "../../context/storage";
 import _ from "lodash";
 import { Container, Row, Col } from "react-bootstrap";
 
 import ProductCard from "./product-card";
 import Cart from "./shop-cart";
-import { Fragment } from "react";
 
 const ShopHome = ({ products }) => {
-  const [cart, setCart] = useState({});
-  const [total, setTotal] = useState(0);
-  const [drawer, setDrawer] = useState(null);
+  const [state, dispatch] = useContext(Context);
+  const { items } = state;
 
   useEffect(() => {
-    if (!_.isEmpty(cart)) {
-      setDrawer(true);
-      setTotal(_.sumBy(_.values(cart), (item) => item.precio * item.qty));
-    } else setDrawer(false);
-  }, [cart]);
+    if (!_.isEmpty(items)) {
+      dispatch({ type: "SET_CART", payload: true });
+      dispatch({
+        type: "SET_CART_TOTAL",
+        payload: _.sumBy(
+          _.values(items),
+          (item) => parseFloat(item.precio) * item.qty
+        )
+      });
+    } else {
+      dispatch({ type: "SET_CART", payload: false });
+      dispatch({
+        type: "SET_CART_TOTAL",
+        payload: 0
+      });
+    }
+  }, [items]);
 
   return (
     <section className="news-page news-home pt-120 pb-120  site-card-border-less-wrapper">
@@ -44,22 +55,14 @@ const ShopHome = ({ products }) => {
                   tallas={tallas}
                   imagen={imagen}
                   _created={_created}
-                  cart={cart}
-                  setCart={setCart}
+                  cart={items}
                 />
               </Col>
             )
           )}
         </Row>
       </Container>
-      <Cart
-        cart={cart}
-        setCart={setCart}
-        drawer={drawer}
-        setDrawer={setDrawer}
-        total={total}
-        setTotal={setTotal}
-      />
+      <Cart />
     </section>
   );
 };

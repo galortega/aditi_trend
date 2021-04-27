@@ -1,7 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 export const ColorFigure = ({ color, text, borderRadius }) => {
-  console.log({ text });
   return (
     <div
       style={{
